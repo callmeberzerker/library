@@ -1,0 +1,35 @@
+{
+  "folders": [
+    {
+      "path": "backend"
+    },
+    {
+      "path": "frontend"
+    }
+  ],
+  "settings": {
+    "go.useLanguageServer": true,
+    "go.languageServerExperimentalFeatures": {
+      "diagnostics": true,
+      "documentLink": true
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      }
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      }
+    },
+    // "[svelte]": {
+    //   "editor.codeActionsOnSave": {
+    //     "source.organizeImports": true
+    //   }
+    // },
+    "editor.formatOnSave": true
+  }
+}
