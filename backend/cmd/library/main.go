@@ -1,14 +1,22 @@
 package main
 
 import (
-	"os"
+	"fmt"
+	"library/pkg/conf"
+	"library/pkg/server"
+	"net/http"
 
-	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 )
 
 func main() {
-	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stdout})
 
-	log.Info().Msg("Stuff goes here")
+	config := conf.NewConfig("dev")
+
+	s := server.NewServer(config)
+
+	s.InitAuthorRoutes()
+
+	log.Error().Err(http.ListenAndServe(fmt.Sprintf("%s:%s", config.Server.Host, config.Server.Port), s.Router))
+
 }

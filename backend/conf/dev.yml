@@ -1,0 +1,9 @@
+server:
+  host: 127.0.0.1
+  port: 8080
+datasource:
+  host: 127.0.0.1
+  port: 5432
+  username: library
+  password: library
+  database: library

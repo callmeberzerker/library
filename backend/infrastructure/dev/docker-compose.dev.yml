@@ -1,0 +1,13 @@
+version: "3.1"
+
+services:
+  localhost:
+    image: postgres:latest
+    container_name: library-db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: library
+      POSTGRES_USER: library
+      POSTGRES_PASSWORD: library
